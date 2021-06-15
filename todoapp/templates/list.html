@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%extends "home.html"%}
+{%block body_block%}
+    <table >
+        <tr>
+            <td>task name</td>
+            <td>status</td>
+            <td>user</td>
+        </tr>
+        {%for tod in todo%}
+        <tr>
+            <td>{{tod.task_name}}</td>
+            <td>{{tod.status}}</td>
+            <td>{{tod.users}}</td>
+            <td><a href="{%url 'remove' tod.id %}">delete</a></td>
+            <td><a href="{%url 'update' tod.id%}">update</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{%endblock%}

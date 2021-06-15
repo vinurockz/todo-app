@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{%extends "home.html"%}
+{%block body_block%}
+<form action="" method="post">
+{%csrf_token%}
+    {{f.as_p}}
+    <input type="submit" value="add">
+</form>
+{%endblock%}
